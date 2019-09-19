@@ -18,10 +18,9 @@ import ClubsEdit from './components/clubs/Edit.vue';
 
 const routes = [
     {
-        path: '/',
-        components: {
-            clubsIndex: ClubsIndex
-        }
+        path: '/admin/clubs',
+        component: ClubsIndex,
+        name: 'clubsIndex'
     },
     {path: '/admin/clubs/create', component: ClubsCreate, name: 'createClub'},
     {path: '/admin/clubs/edit/:id', component: ClubsEdit, name: 'editClub'},

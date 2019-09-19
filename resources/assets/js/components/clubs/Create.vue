@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <router-link to="/" class="btn btn-default">Back</router-link>
+                    <router-link to="/admin/clubs" class="btn btn-default">Back</router-link>
                 </div>
                 <h4 class="panel-title-style"><b>Create new club</b></h4>
             </div>
@@ -62,7 +62,7 @@
                 var newClub = app.club;
                 axios.post('/api/clubs', newClub)
                     .then(function (resp) {
-                        app.$router.push({path: '/'});
+                        app.$router.push({path: '/admin/clubs'});
                     })
                     .catch(function (resp) {
                         console.log(resp);

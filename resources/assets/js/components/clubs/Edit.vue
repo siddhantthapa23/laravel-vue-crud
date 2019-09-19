@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <router-link to="/" class="btn btn-default">Back</router-link>
+                    <router-link to="/admin/clubs" class="btn btn-default">Back</router-link>
                 </div>
                 <h4 class="panel-title-style"><b>Edit club</b></h4>
             </div>
@@ -75,7 +75,7 @@
                 var newClub = app.club;
                 axios.patch('/api/clubs/' + app.clubId, newClub)
                     .then(function (resp) {
-                        app.$router.replace('/');
+                        app.$router.replace('/admin/clubs');
                     })
                     .catch(function (resp) {
                         console.log(resp);

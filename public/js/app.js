@@ -1093,10 +1093,9 @@ window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 
 
 var routes = [{
-    path: '/',
-    components: {
-        clubsIndex: __WEBPACK_IMPORTED_MODULE_1__components_clubs_Index_vue___default.a
-    }
+    path: '/admin/clubs',
+    component: __WEBPACK_IMPORTED_MODULE_1__components_clubs_Index_vue___default.a,
+    name: 'clubsIndex'
 }, { path: '/admin/clubs/create', component: __WEBPACK_IMPORTED_MODULE_2__components_clubs_Create_vue___default.a, name: 'createClub' }, { path: '/admin/clubs/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_clubs_Edit_vue___default.a, name: 'editClub' }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
@@ -47828,7 +47827,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var app = this;
             var newClub = app.club;
             axios.post('/api/clubs', newClub).then(function (resp) {
-                app.$router.push({ path: '/' });
+                app.$router.push({ path: '/admin/clubs' });
             }).catch(function (resp) {
                 console.log(resp);
                 alert("Could not create your club");
@@ -47854,7 +47853,7 @@ var render = function() {
           [
             _c(
               "router-link",
-              { staticClass: "btn btn-default", attrs: { to: "/" } },
+              { staticClass: "btn btn-default", attrs: { to: "/admin/clubs" } },
               [_vm._v("Back")]
             )
           ],
@@ -48176,7 +48175,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var app = this;
             var newClub = app.club;
             axios.patch('/api/clubs/' + app.clubId, newClub).then(function (resp) {
-                app.$router.replace('/');
+                app.$router.replace('/admin/clubs');
             }).catch(function (resp) {
                 console.log(resp);
                 alert("Could not create your club");
@@ -48202,7 +48201,7 @@ var render = function() {
           [
             _c(
               "router-link",
-              { staticClass: "btn btn-default", attrs: { to: "/" } },
+              { staticClass: "btn btn-default", attrs: { to: "/admin/clubs" } },
               [_vm._v("Back")]
             )
           ],
